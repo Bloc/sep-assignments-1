@@ -2,9 +2,9 @@ Line
 
 1. It is structured on top of an array and allows a user to add, search for and remove members from the line. It also allows a user to find the front, back and middle member of the line.
 2. You would use the search functionality and the members name as a parameter.
-3. This could be used for any type of ordered list where items need to be added in order and removed at will.
+3. This could be used for any type of ordered list where items need to be added in order and removed at will. A good example could include a jukebox playlist, DMV waiting line, or a restaurant order system.
 
 Pixel
-1. It is structured essentially like a Hash with a Key and corresponding Value.
-2. You would call the corresponding Key to get the correct value that you are looking for.
-3. This could be used for any type of data that requires both a key and corresponding value.
+1. It is structured essentially like an array of arrays.
+2. You would call the corresponding X array and then the corresponding Y array to find the correct data point.
+3. This could be used for any type of data that requires a structured matrix with both X and Y coordinates. A good example could inlclude the game Connect Four, a Bingo board or the game Battleship.
