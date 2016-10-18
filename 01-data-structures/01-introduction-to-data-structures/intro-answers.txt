@@ -1,0 +1,10 @@
+Line
+
+1. It is structured on top of an array and allows a user to add, search for and remove members from the line. It also allows a user to find the front, back and middle member of the line.
+2. You would use the search functionality and the members name as a parameter.
+3. This could be used for any type of ordered list where items need to be added in order and removed at will.
+
+Pixel
+1. It is structured essentially like a Hash with a Key and corresponding Value.
+2. You would call the corresponding Key to get the correct value that you are looking for.
+3. This could be used for any type of data that requires both a key and corresponding value.

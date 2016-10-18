@@ -1,4 +1,5 @@
 include RSpec
+require_relative 'pixel'
 
 RSpec.describe Pixel, type: Class do
   let(:pixel) { Pixel.new(255, 255, 255, 0, 0) }
@@ -13,7 +14,7 @@ RSpec.describe Pixel, type: Class do
     end
 
     it "corrects a pixel color value if it's less than 0" do
-      p = Pixel.new(-1, 0, 0, 0, 0)
+      p = Pixel.new(-1, 0, 50, 0, 0)
       expect(p.red).to eq 0
     end
 
