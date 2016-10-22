@@ -7,18 +7,16 @@ class MyStack
   end
 
   def push(item)
-    @stack << item
-    self.top = item
+    @stack.unshift(item)
+    self.top = @stack[0]
   end
 
   def pop
-    item = self.top
-    @stack.slice!((@stack.length) -1)
-    self.top = @stack.last
-    return item
+    self.top = @stack[1]
+    @stack.shift
   end
 
   def empty?
-    @stack.length == 0 ? true : false
+    @stack.length == 0
   end
 end
