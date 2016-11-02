@@ -1,4 +1,5 @@
 class HashClass
+  require_relative 'hash_item'
 
   def initialize(size)
     @items = Array.new(size)
@@ -10,7 +11,11 @@ class HashClass
     if hashed_item.nil?
       @items[index(key, @size)] = HashItem.new(key, value)
     elsif hashed_item.key != key
-      resize
+      while @items[index(key, @size)].key != nil && @items[index(key, @size)].key != key
+        resize
+        re_index = index(key, @size)
+        break if @items[re_index] == nil
+      end
       self[key] = value
     elsif hashed_item.key == key && hashed_item.value != value
       resize
