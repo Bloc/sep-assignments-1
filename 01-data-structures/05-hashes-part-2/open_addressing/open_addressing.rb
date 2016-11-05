@@ -21,7 +21,7 @@ class OpenAddressing
     elsif hashed_item.key == key && hashed_item.value != value
       if next_open_index(indy) == -1
         resize
-        re_index = next_open_index(index(key, @size))
+        re_index = index(key, @size)
         @items[re_index].value = value
       else
         new_index = next_open_index(index(key, @size))
@@ -44,16 +44,29 @@ class OpenAddressing
 
   # Given an index, find the next open index in @items
   def next_open_index(index)
-    while index <= (@size - 1)
+    initial_index = index
+    while index <= (@size -1)
       if @items[index] == nil
         return index
-      elsif @items[index] != nil && index == (@size - 1)
+      elsif @items[index] != nil && index == (initial_index - 1)
         return -1
+      elsif @items[index] != nil && @items[index] == (@size -1)
+        index = 0
       else
         index += 1
       end
     end
+    -1
   end
+
+  #def next_open_index(index)
+  #  (index..(@size + index - 1) % @size).each do |idx|
+  #    if @items[idx] == nil
+  #      return idx
+  #    end
+  #  end
+  #  return -1
+  #end
 
   # Simple method to return the number of items in the hash
   def size

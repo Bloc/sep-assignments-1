@@ -1,6 +1,7 @@
 include RSpec
 
 require_relative 'separate_chaining'
+require_relative 'HashPrinter'
 
 RSpec.describe SeparateChaining, type: Class do
   let(:star_wars_movies) { SeparateChaining.new(6) }
@@ -91,6 +92,13 @@ RSpec.describe SeparateChaining, type: Class do
       expect(movies["A New Hope"]).to eq "Average"
       expect(movies["Empire Strikes Back"]).to eq "Excellent"
       expect(movies["Return of the Jedi"]).to eq "The Best"
+    end
+  end
+
+  describe "hash printer" do
+    it "prints the hash data" do
+      star_wars_movies.hash_printer
+      expect(star_wars_movies.size).to eq 6
     end
   end
 end

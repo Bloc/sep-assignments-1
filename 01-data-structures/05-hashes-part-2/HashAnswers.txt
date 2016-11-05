@@ -11,3 +11,12 @@ This collision resolution strategy employs two different hashing algorithms ther
 
 My Method:
 When a collision occurs take the position found by the initial hashing strategy and make it negative to find a new point that is that distance from the end of the table and then decrement backwards via negative linear probing.
+
+Printer Output:
+
+Load Factor: 0.42
+Index: 0, Value: #<LinkedList:0x007ff6078e2ec0 @head=#<Node:0x007ff6078e3be0 @key="Star Wars: The Empire Strikes Back", @value="Number Five", @next=nil>, @tail=#<Node:0x007ff6078e3be0 @key="Star Wars: The Empire Strikes Back", @value="Number Five", @next=nil>>
+Index: 1, Value: #<LinkedList:0x007ff6078e2880 @head=#<Node:0x007ff607875d48 @key="Star Wars: Attack of the Clones", @value="Number Two", @next=#<Node:0x007ff6078e10c0 @key="Star Wars: Return of the Jedi", @value="Number Six", @next=nil>>, @tail=#<Node:0x007ff6078e10c0 @key="Star Wars: Return of the Jedi", @value="Number Six", @next=nil>>
+Index: 2, Value: #<LinkedList:0x007ff6078e1d18 @head=#<Node:0x007ff6078743f8 @key="Star Wars: A New Hope", @value="Number Four", @next=nil>, @tail=#<Node:0x007ff6078743f8 @key="Star Wars: A New Hope", @value="Number Four", @next=nil>>
+Index: 3, Value: #<LinkedList:0x007ff6078e3578 @head=#<Node:0x007ff6078766a8 @key="Star Wars: The Phantom Menace", @value="Number One", @next=nil>, @tail=#<Node:0x007ff6078766a8 @key="Star Wars: The Phantom Menace", @value="Number One", @next=nil>>
+Index: 4, Value: #<LinkedList:0x007ff6078e1700 @head=#<Node:0x007ff607875410 @key="Star Wars: Revenge of the Sith", @value="Number Three", @next=nil>, @tail=#<Node:0x007ff607875410 @key="Star Wars: Revenge of the Sith", @value="Number Three", @next=nil>>
