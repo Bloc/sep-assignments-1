@@ -24,11 +24,11 @@ Benchmark.bm(100) do |x|
   x.report('poorly written ruby 250:')  {poorly_written_ruby(array1, array2, array3)}
   x.report('poorly written ruby 1k:')  {poorly_written_ruby(array4, array5, array6)}
   x.report('poorly written ruby 10K:')  {poorly_written_ruby(array7, array8, array9)}
-  x.report('poorly written ruby 100K:')  {poorly_written_ruby(array10, array11, array12)}
+  #x.report('poorly written ruby 100K:')  {poorly_written_ruby(array10, array11, array12)}
   x.report('well written ruby 250:')    {well_written_ruby(array1, array2, array3)}
   x.report('well written ruby 1k:')    {well_written_ruby(array4, array5, array6)}
   x.report('well written ruby 10K:')    {well_written_ruby(array7, array8, array9)}
-  x.report('well written ruby 100K:')  {best_written_ruby(array10, array11, array12)}    
+  x.report('well written ruby 100K:')  {well_written_ruby(array10, array11, array12)}    
   x.report('better written ruby 250:')  {better_written_ruby(array1, array2, array3)}
   x.report('better written ruby 1k:')  {better_written_ruby(array4, array5, array6)}
   x.report('better written ruby 10K:')  {better_written_ruby(array7, array8, array9)}
