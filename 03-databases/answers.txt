@@ -21,7 +21,7 @@ ten_posts = post.limit(10)
 SELECT * from post ORDER BY id ASC limit 10;
 
 5. group records:
-movies_genres = movie.group_by(genre)
+movies_genres = Movie.group_by(genre)
 Select * from movie GROUP BY genre;
 
 6. perform calculations:
