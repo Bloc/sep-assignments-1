@@ -1,0 +1,39 @@
+1. Remove Dupes:
+unique_movie_genre = movie.genre.uniq
+SELECT DISTINCT genre FROM movie;
+
+2. filter records:
+movies_with_rating_less_than_ten = Movie.where("rating <= ?", 10)
+SELECT * FROM movie WHERE rating < 10;
+
+reviewed_movies = Movie.where("reviewed == ?", true)
+SELECT * FROM movie WHERE reviewed = true;
+
+movies_with_name_marvel = Movie.name =~ /marvel/
+SELECT * FROM movie WHERE name like 'marvel';
+
+3. sort records:
+post_descending = post.id.descending
+SELECT * FROM post ORDER BY id DESC;
+
+4. limit records returned:
+ten_posts = post.limit(10)
+SELECT * from post ORDER BY id ASC limit 10;
+
+5. group records:
+movies_genres = movie.group_by(genre)
+Select * from movie GROUP BY genre;
+
+6. perform calculations:
+number_of_users = User.count
+SELECT COUNT(*) FROM user;
+
+7. join tables:
+cross_join_artist_album = Album.joins(:artist)
+SELECT * FROM albums JOIN artists ON albums.artist_id = artists.id;
+
+inner_join_artist_album = Album.join.where(artist_id: artists.id)
+SELECT * From albums LEFT JOIN artists ON albums.artist_id = artists.id;
+
+outer_join_artist_album = Album.leftjoin.where(artists.id)
+SELECT albums.name AS 'Album', albums.year, artists.name AS 'Artist' FROM albums JOIN artists ON albums.artist_id = artists.id WHERE albums.year > 1980;
