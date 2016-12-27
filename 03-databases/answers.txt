@@ -30,10 +30,10 @@ SELECT COUNT(*) FROM user;
 
 7. join tables:
 cross_join_artist_album = Album.joins(:artist)
-SELECT * FROM albums JOIN artists ON albums.artist_id = artists.id;
+SELECT * FROM albums CROSS JOIN artists ON albums.artist_id = artists.id;
 
 inner_join_artist_album = Album.join.where(artist_id: artists.id)
-SELECT * From albums LEFT JOIN artists ON albums.artist_id = artists.id;
+SELECT * From albums INNER JOIN artists ON albums.artist_id = artists.id;
 
 outer_join_artist_album = Album.leftjoin.where(artists.id)
-SELECT albums.name AS 'Album', albums.year, artists.name AS 'Artist' FROM albums JOIN artists ON albums.artist_id = artists.id WHERE albums.year > 1980;
+SELECT albums.name AS 'Album', albums.year, artists.name AS 'Artist' FROM albums OUTER JOIN artists ON albums.artist_id = artists.id WHERE albums.year > 1980;
